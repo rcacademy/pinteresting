@@ -16,10 +16,10 @@ I would recommend starting with the core feature set before adding features like
 
 Go ahead and create a new Rails app and a Github repository. Add git tracking to your Rails project and make sure you can push your code up to your Github repository.
 
-### Phase 4: Add Bootstrap to our Project
+### Phase 3: Add Bootstrap to our Project
 * [Use Bower to Install Bootstrap](./bootstrap.md)
 
-### Phase 3: Add our user registration system
+### Phase 4: Add our user registration system
 
 We will be using the [Devise gem](https://github.com/plataformatec/devise) for our user registration.
 
@@ -29,12 +29,12 @@ Once we have our user accounts, we can start to enforce certain behaviors such a
 
 * [Use Devise to create a user registration system](./devise.md)
 
-### Phase 4: Deploying to Heroku
+### Phase 5: Deploying to Heroku
 [Heroku](http://heroku.com) is a service that will host our Pinteresting project and make it possible for other people to access our application.
 
 This will be covered in class on 5/19.
 
-### Phase 5: Allow users to upload images for their pins
+### Phase 6: Allow users to upload images for their pins
 We will be using two tools for this, which will be covered in class during week 8.
 
 1. Paperclip Gem
