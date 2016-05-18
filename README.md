@@ -2,6 +2,8 @@
 
 For this project, we're going to explore Ruby on Rails by creating a clone of the popular website [Pinterest.com](http://pinterest.com). I encourage you to create an account and try it out.
 
+![pinterest](./images/pinterest.jpg)
+
 ### Phase 1: Design Phase
 It is useful to sit down and write out what you think you will need to build for our application. Our videos will cover a very specific features like user login/signup, file upload, etc. but what else do you want to allow your users to do?
 
