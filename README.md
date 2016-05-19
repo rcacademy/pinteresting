@@ -33,6 +33,8 @@ Once we have our user accounts, we can start to enforce certain behaviors such a
 
 This will be covered in class on 5/19.
 
+[Using Rails 4 on Heroku](./heroku.md)
+
 ### Phase 6: Allow users to upload images for their pins
 We will be using two tools for this, which will be covered in class during week 8.
 
