@@ -126,5 +126,5 @@ heroku open
 
 This will launch your browser and load your application.
 
-#### Official Docs for Rails 4.x on Heroku
+## Official Docs for Rails 4.x on Heroku
 You can read more in depth on using Rails 4.x on heroku here: [https://devcenter.heroku.com/articles/getting-started-with-rails4](https://devcenter.heroku.com/articles/getting-started-with-rails4)
