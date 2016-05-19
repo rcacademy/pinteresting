@@ -1,0 +1,10 @@
+
+<div class="jumbotron">
+  <h1>Holocron</h1>
+  <p>Share and find the best content from the Star Wars universe. </p>
+  <% if user_signed_in? %>
+    <p><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %></p>
+  <% else %>
+    <p><%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %> <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  <% end %>
+</div>
