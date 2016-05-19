@@ -11,7 +11,6 @@ At its core, Pinterest allows users to have a profile and share "pins" to their 
 
 I would recommend starting with the core feature set before adding features like following other users or tagging pins.
 
-
 ### Phase 2: Creating our Rails App
 
 Go ahead and create a new Rails app and a Github repository. Add git tracking to your Rails project and make sure you can push your code up to your Github repository.
@@ -43,3 +42,10 @@ We will be using two tools for this, which will be covered in class during week 
   * Requires ImageMagick to be installed
 2. Amazon S3
   * Using Amazon S3 with Paperclip
+
+
+## Videos on Youtube
+1. [Using Devise](https://www.youtube.com/watch?v=qV9JFO7k-Dk)
+2. [Adding Bootstrap](https://www.youtube.com/watch?v=K17A1ky8HeA)
+3. [Creating our Pins](https://www.youtube.com/watch?v=TBhltBex2ts)
+4. [Associating Users with Pins](https://www.youtube.com/watch?v=e5h2zEnX-tw)
