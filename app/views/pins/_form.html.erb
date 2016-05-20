@@ -1,4 +1,5 @@
-<%= form_for(@pin) do |f| %>
+
+<%= form_for @pin , html: { multipart: true } do |f| %>
   <% if @pin.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
@@ -14,6 +15,9 @@
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

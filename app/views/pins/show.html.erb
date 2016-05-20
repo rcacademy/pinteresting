@@ -1,6 +1,7 @@
 <p>
   <strong>Description:</strong>
   <%= @pin.description %>
+  <%= image_tag @pin.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
