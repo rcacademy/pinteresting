@@ -13,6 +13,22 @@ This will be where we host all of our applications for this class. It is a great
 
 Follow the instructions for your respective operating system in order to add the `heroku` command to our terminal and setup our SSH keys in Heroku.
 
+If you get a message indicating that the `heroku` command is not found, close your terminal window and open a new one.
+
+:warning: For PC users, you will have to run the `heroku login` command from inside of the Windows Command Prompt instead of the Git shell.
+
+You can then switch back to the Git shell after the login is successful.
+
+
+#### Adding SSH keys to Heroku
+In the web UI of Heroku, click on your email address and select `Manage Account`.
+
+Scroll down to **SSH Keys** and click on "Add". It will ask you to paste in your public key. You can use the same public key we generated for Github.
+
+This key will be the `.pub` file found in ~/.ssh (most likely `id_rsa.pub`).
+
+You will have to do this in order to allow your computer to send code to Github.
+
 #### Create our Heroku Application
 Make sure your app is being tracked with git.
 
