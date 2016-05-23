@@ -90,25 +90,42 @@ We can access the pin's pin_image after we've uploaded a file. Here are a few ex
 The image_tag will render an `<img>` tag for us.
 
 ```
-<%= image_tag(pin.pin_image.url) %>
+<%= image_tag(@pin.pin_image.url) %>
 
-<%= image_tag(pin.pin_image.url(:medium)) %>
+<%= image_tag(@pin.pin_image.url(:medium)) %>
 
-<%= image_tag(pin.pin_image.url(:thumb)) %>
+<%= image_tag(@pin.pin_image.url(:thumb)) %>
 
 ```
 
 If we want to make an image a link, we can do that with a combination or `link_to` and `image_tag`.
 
-In this case, `pin` is a variable that contains our pin.
+In this case, `@pin` is an instance variable that contains our pin.
 ```
-<%= link_to image_tag(pin.image.url(:medium)), pin %>
+<%= link_to image_tag(@pin.image.url(:medium)), @pin %>
 ```
 
 This can also be written with the path defined.
 
 ```
-<%= link_to image_tag(pin.image.url(:medium)), pin_path(pin) %>
+<%= link_to image_tag(pin.image.url(:medium)), pin_path(@pin) %>
 ```
 
 ### Uploading files to Amazon S3
+
+Now that we have images working on our local computers, we need to think about how we might support this on our server.
+
+We are using Heroku for this class which does not function the same as other servers. If we deploy our code to Heroku, it should work but you will find that any of your uploaded files will eventually be deleted as Heroku does not support storing files.
+
+To fix this, we're going to store our image using another 3rd party service called Amazon Web Services (AWS). AWS has a product called `S3` which is for storing files and content.
+
+Paperclip supports uploading to S3 but we need to set it up manually.
+
+#### Sign up for an Amazon AWS Account
+
+Create a few account at [http://aws.amazon.com](http://aws.amazon.com). It might ask for a credit card but all users get added to the free tier to start with.
+
+#### Setup S3
+Find the S3 service under the Services tab. There should be an option to create a new bucket. Buckets are containers that we will use to store our files. You can use buckets to organize your uploads for 1 or more applications that you build so you don't have to create a new AWS account for each project you work on.
+
+Create a new bucket and give it a name. Select `US Standard` for the region and click **create**.
