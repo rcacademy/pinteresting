@@ -140,6 +140,7 @@ Give your bucket a name and select **US Standard** for the region, click **Creat
 Click on the bucket name and then the **Properties** tab in the top right corner.
 
 ![4 aws](./images/04_aws.png)
+
 Open the **Permissions** section and click on **Add more persmissions**. Select "everyone" as a grantee and check all the boxes.
 
 ![6 aws](./images/06_aws.png)
@@ -147,9 +148,13 @@ Open the **Permissions** section and click on **Add more persmissions**. Select 
 Now navigate to your username at the top and click on **Security Credentials**.
 
 ![7 aws](./images/07_aws.png)
+
 Click on **Get Started with IAM Users**.
+
 ![8 aws](./images/08_aws.png)
+
 Now we can setup a new user that will be used to let our application send data to AWS S3. Click **Create New Users**. On the next screen, enter a username and make sure you keep the checkbox selected for creating an access key ID and secret access key.
+
 ![9 aws](./images/09_aws.png)
 
 You will now be able to see your new user and an access key id and secret access key. You will need to save these somewhere safe as you will not be able to get them after you leave this screen.
