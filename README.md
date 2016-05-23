@@ -38,12 +38,12 @@ This will be covered in class on 5/19.
 ### Phase 6: Allow users to upload images for their pins
 We will be using two tools for this, which will be covered in class during week 8.
 
-1. Paperclip Gem
-  * [Image uploading with the Paperclip gem](https://www.youtube.com/watch?v=Z5W-Y3aROVE)
-  [documentation](https://github.com/thoughtbot/paperclip)
-  * Requires ImageMagick to be installed
-2. Amazon S3
-  * Using Amazon S3 with Paperclip
+[Using Paperclip for file uploads](./paperclip.md)
+
+**More Resources**
+  * [Paperclip Documentation](https://github.com/thoughtbot/paperclip)
+  * [Image uploading with the Paperclip gem (video)](https://www.youtube.com/watch?v=Z5W-Y3aROVE)
+  * [Amazon AWS](http://aws.amazon.com)
 
 
 ## Videos on Youtube
@@ -51,3 +51,4 @@ We will be using two tools for this, which will be covered in class during week 
 2. [Adding Bootstrap](https://www.youtube.com/watch?v=K17A1ky8HeA)
 3. [Creating our Pins](https://www.youtube.com/watch?v=TBhltBex2ts)
 4. [Associating Users with Pins](https://www.youtube.com/watch?v=e5h2zEnX-tw)
+5. more to come!
