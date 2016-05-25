@@ -46,7 +46,7 @@ We will be using two tools for this, which will be covered in class during week 
   * [Amazon AWS](http://aws.amazon.com)
 
 
-#### Phase 7: Styling & Design
+### Phase 7: Styling & Design
 
 Use [Bootstrap](http://getbootstrap.com/)'s documentation to find CSS components that match what you are trying to build.
 
