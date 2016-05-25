@@ -54,6 +54,18 @@ For our fluid and responsive Pinterest layout, we are going to use Masonry.js to
 
 [Learn more about using Masonry.js](https://github.com/rcacademy/pinteresting/blob/master/masonry.md)
 
+## Features to consider
+
+- [ ] Allow a user to comment on a pin
+- [ ] Allow a user to organize pins into boards
+- [ ] Allow a user to have a username and/or a profile
+- [ ] Allow a user to have an avatar
+- [ ] Allow a user to repin someone else's pin
+- [ ] Allow a user to like/favorite/heart a pin
+- [ ] Allow a user to search for pins
+- [ ] Allow a user to organize pins by category
+- [ ] Allow a user to follow another user's board or potentially all of their boards
+
 
 ## Videos on Youtube
 1. [Using Devise](https://www.youtube.com/watch?v=qV9JFO7k-Dk)
