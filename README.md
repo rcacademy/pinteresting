@@ -46,6 +46,15 @@ We will be using two tools for this, which will be covered in class during week 
   * [Amazon AWS](http://aws.amazon.com)
 
 
+#### Phase 7: Styling & Design
+
+Use [Bootstrap](http://getbootstrap.com/)'s documentation to find CSS components that match what you are trying to build.
+
+For our fluid and responsive Pinterest layout, we are going to use Masonry.js to render our pins on our index page.
+
+[Learn more about using Masonry.js](https://github.com/rcacademy/pinteresting/blob/master/masonry.md)
+
+
 ## Videos on Youtube
 1. [Using Devise](https://www.youtube.com/watch?v=qV9JFO7k-Dk)
 2. [Adding Bootstrap](https://www.youtube.com/watch?v=K17A1ky8HeA)
