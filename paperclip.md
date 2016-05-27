@@ -66,7 +66,7 @@ Forms that upload files must have an attribute on them that indicates they suppo
 Next, we can add a `file_field` to our form and use the attribute we gave it.
 
 ```
-<%= form_for @pin, url: pins_path, html: { multipart: true } do |form| %>
+<%= form_for @pin, html: { multipart: true } do |form| %>
   <%= form.file_field :pin_image %>
 <% end %>
 ```
