@@ -125,7 +125,7 @@ Paperclip supports uploading to S3 but we need to set it up manually.
 
 #### Sign up for an Amazon AWS Account
 
-Create a few account at [http://aws.amazon.com](http://aws.amazon.com). It might ask for a credit card but all users get added to the free tier to start with.
+Create a new account at [http://aws.amazon.com](http://aws.amazon.com). It might ask for a credit card but all users get added to the free tier to start with.
 
 #### Setup S3
 Find the S3 service under the Services tab. There should be an option to create a **new bucket**. Buckets are containers that we will use to store our files. You can use buckets to organize your uploads for 1 or more applications that you build so you don't have to create a new AWS account for each project you work on.
@@ -160,6 +160,12 @@ Now we can setup a new user that will be used to let our application send data t
 You will now be able to see your new user and an access key id and secret access key. You will need to save these somewhere safe as you will not be able to get them after you leave this screen.
 
 ![10 aws](./images/10_aws.png)
+
+Go back to **Security Credentials** and click on **Groups** in the left-hand column. Create a new group and give it the name of 'pinteresting'.
+
+Next, you will be asked to attach a policy. Search for **S3** and check the box next to `AmazonS3FullAccess` and click on **Next Step**. Finally, click on **Create Group**.
+
+Now you need to add the AWS user you just created and add it to the group. If you don't do this, your AWS user won't be able to upload images to S3.
 
 OK, we now have everything setup on the AWS side. Now we need to setup our app to send data to S3.
 
