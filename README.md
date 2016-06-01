@@ -72,4 +72,6 @@ For our fluid and responsive Pinterest layout, we are going to use Masonry.js to
 2. [Adding Bootstrap](https://www.youtube.com/watch?v=K17A1ky8HeA)
 3. [Creating our Pins](https://www.youtube.com/watch?v=TBhltBex2ts)
 4. [Associating Users with Pins](https://www.youtube.com/watch?v=e5h2zEnX-tw)
-5. more to come!
+5. [Adding File Uploads with Paperclip](https://www.youtube.com/watch?v=WQAR4bPeNCs)
+6. [Adding Bootstrap Grid & Panels](https://www.youtube.com/watch?v=nFRHK1GW2c8)
+7. [Adding Masonry to our Project](https://www.youtube.com/watch?v=UZsKyIhmOas)
