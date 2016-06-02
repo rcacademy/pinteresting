@@ -10,7 +10,7 @@
             <%= pin.description %>
           </div>
           <div class = "user">
-            <div class = "user-detail"><%= pin.user.username %></div>
+            <div class = "user-detail"><%= link_to pin.user.username, user_path(pin.user.username) %></div>
             <% if pin.user == current_user %>
             <div class = "user-actions">
               <%= link_to 'Edit', edit_pin_path(pin) %>
