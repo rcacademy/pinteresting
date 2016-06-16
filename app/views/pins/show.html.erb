@@ -1,9 +1,13 @@
 <div class = "row">
   <div class = "col-md-8 col-md-offset-2">
 
+    <p>Posted under: <%= link_to @pin.board.name, @pin.board %></p>
+
     <%= image_tag @pin.image.url, class: 'img-responsive', style: 'width: 100%' %>
 
     <%= @pin.description %>
+
+
 
     <h2>Comments</h2>
 

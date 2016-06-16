@@ -54,3 +54,12 @@ body {
   background: url(image-path("space.png"));
   background-size: cover;
 }
+
+
+#boards a:hover {
+  text-decoration: none;
+}
+
+.panel-body {
+  padding: 0px;
+}
