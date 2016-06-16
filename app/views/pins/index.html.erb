@@ -11,6 +11,7 @@
           </div>
           <div class = "user">
             <div class = "user-detail"><%= link_to pin.user.username, user_path(pin.user.username) %></div>
+            <small>Posted in <%= link_to pin.board.name, pin.board %></small>
             <div class = "user-detail"><%= pluralize(pin.likes.count, "like") %></div>
             <div class = "user-actions">
               <% if pin.user != current_user && user_signed_in? %>
