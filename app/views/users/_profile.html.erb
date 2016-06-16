@@ -1,0 +1,6 @@
+<h3><%= image_tag(@user.avatar.url(:thumb)) %> <%= @user.username %></h3>
+<p><%= @user.bio %></p>
+
+<% if current_user == @user %>
+  <%= link_to "Settings", edit_user_registration_path %>
+<% end %>
