@@ -79,3 +79,4 @@ For our fluid and responsive Pinterest layout, we are going to use Masonry.js to
 9. [Adding support for user profile pages](https://www.youtube.com/watch?v=cMWIEU0ZkfU)
 10. [Adding user bio and avatar](https://www.youtube.com/watch?v=1Xq0FjmP3sQ)
 11. [Adding repinning](https://www.youtube.com/watch?v=OMeYP9LTGyM)
+12. [Adding likes](https://www.youtube.com/watch?v=lYahr5pPtm8)
