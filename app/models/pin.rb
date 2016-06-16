@@ -8,8 +8,9 @@ class Pin < ActiveRecord::Base
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  def repost(user_object)
+  def repost(edited_pin, user_object)
     repost_pin = self.dup
+    repost_pin.board_id = edited_pin[:board_id]
     repost_pin.user_id = user_object.id
     repost_pin.image = self.image
     repost_pin.original_pin_id = self.id

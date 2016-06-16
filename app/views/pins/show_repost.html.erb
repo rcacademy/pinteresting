@@ -1,0 +1,9 @@
+<%= form_for @pin, url: repost_pin_path, method: :post do |f| %>
+  <div class = "form-group">
+    <%= f.label :board %>
+    <%= f.select :board_id, options_from_collection_for_select(current_user.boards, "id", "name"), class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

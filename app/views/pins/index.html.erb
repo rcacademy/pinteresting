@@ -16,7 +16,7 @@
             <div class = "user-actions">
               <% if pin.user != current_user && user_signed_in? %>
                 <%= link_to 'Like', like_pin_path(pin), method: :post %>
-                <%= link_to 'Repost', repost_pin_path(pin), method: :post, data: { confirm: 'Are you sure?' }, class: 'pull-right' %>
+                <%= link_to 'Repost', repost_pin_path(pin), class: 'pull-right' %>
               <% end %>
               <% if pin.is_repost? %>
                 <p>I'm a repost!</p>

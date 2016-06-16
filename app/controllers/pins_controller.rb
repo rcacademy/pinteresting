@@ -63,8 +63,12 @@ class PinsController < ApplicationController
     end
   end
 
+  def show_repost
+    @pin = Pin.find(params[:id])
+  end
+
   def repost
-    @pin.repost(current_user)
+    @pin.repost(pin_params, current_user)
     redirect_to root_url
   end
 

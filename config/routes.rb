@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
     member do
       post '/repost' => 'pins#repost'
+      get '/repost' => 'pins#show_repost'
     end
 
     member do
