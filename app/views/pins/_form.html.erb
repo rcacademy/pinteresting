@@ -1,0 +1,30 @@
+
+<%= form_for @pin , html: { multipart: true } do |f| %>
+  <% if @pin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+
+      <ul>
+      <% @pin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class = "form-group">
+    <%= f.label :board %>
+    <%= f.select :board_id, options_from_collection_for_select(current_user.boards, "id", "name"), class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+<div class = "row">
+  <div class = "col-md-8 col-md-offset-2">
+
+    <p>Posted under: <%= link_to @pin.board.name, @pin.board %></p>
+
+    <%= image_tag @pin.image.url, class: 'img-responsive', style: 'width: 100%' %>
+
+    <%= @pin.description %>
+
+
+
+    <h2>Comments</h2>
+
+    <% @pin.comments.each do |comment| %>
+      <p><%= comment.body %></p>
+      <p>
+        <strong><%= comment.user.username %></strong>
+      </p>
+
+      <hr>
+
+    <% end %>
+
+    <% if user_signed_in? %>
+      <h2>Add a comment:</h2>
+      <%= form_for([@pin, @pin.comments.build]) do |f| %>
+        <p>
+          <%= f.label :body %><br>
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    <% end %>
+
+</div>
+</div>

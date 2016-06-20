@@ -1,0 +1,34 @@
+<div class="grid row">
+  <% @pins.each do |pin| %>
+    <div class = "grid-item col-md-3 col-sm-4 col-xs-12">
+      <div class = "pin grid-item-content">
+        <div class = "pin-image">
+          <%= link_to(image_tag(pin.image.url(:medium)), pin_path(pin)) %>
+        </div>
+        <div class = "pin-content">
+          <div class = "pin-description">
+            <%= pin.description %>
+          </div>
+          <div class = "user">
+            <div class = "user-detail"><%= link_to pin.user.username, user_path(pin.user.username) %></div>
+            <small>Posted in <%= link_to pin.board.name, pin.board %></small>
+            <div class = "user-detail"><%= pluralize(pin.likes.count, "like") %></div>
+            <div class = "user-actions">
+              <% if pin.user != current_user && user_signed_in? %>
+                <%= link_to 'Like', like_pin_path(pin), method: :post %>
+                <%= link_to 'Repost', repost_pin_path(pin), class: 'pull-right' %>
+              <% end %>
+              <% if pin.is_repost? %>
+                <p>I'm a repost!</p>
+              <% end %>
+              <% if pin.user == current_user %>
+                <%= link_to 'Edit', edit_pin_path(pin) %>
+                <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

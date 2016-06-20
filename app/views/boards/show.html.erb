@@ -1,0 +1,42 @@
+<h3>
+  <%= link_to image_tag(@board.user.avatar.url(:thumb)), user_path(@board.user.username) %>
+  <%= link_to @board.user.username, user_path(@board.user.username) %>
+</h3>
+<p><%= @board.user.bio %></p>
+
+<div class = "page-header">
+  <h1><%= @board.name %></h1>
+  <p><%= @board.description %></p>
+  <% if @board.user == current_user %>
+    <p>
+      <%= link_to 'edit', edit_board_path(@board) %> |
+      <%= link_to 'delete', @board, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  <% end %>
+</div>
+
+<div class="grid row">
+  <% @board.pins.each do |pin| %>
+    <div class = "grid-item col-md-3 col-sm-4 col-xs-12">
+      <div class = "pin grid-item-content">
+        <div class = "pin-image">
+          <%= link_to image_tag(pin.image.url(:medium)), pin %>
+        </div>
+        <div class = "pin-content">
+          <div class = "pin-description">
+            <%= pin.description %>
+          </div>
+          <div class = "user">
+            <div class = "user-detail"><%= pin.user.username %></div>
+            <% if pin.user == current_user %>
+            <div class = "user-actions">
+              <%= link_to 'Edit', edit_pin_path(pin) %>
+              <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

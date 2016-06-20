@@ -1,0 +1,2 @@
+module BoardsControllerHelper
+end

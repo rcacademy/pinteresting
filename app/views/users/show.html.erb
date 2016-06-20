@@ -1,0 +1,39 @@
+<h3>
+  <%= link_to image_tag(@user.avatar.url(:thumb)), user_path(@user.username) %>
+  <%= link_to @user.username, user_path(@user.username) %>
+</h3>
+<p><%= @user.bio %></p>
+<% if current_user == @user %>
+  <%= link_to "Settings", edit_user_registration_path %>
+<% end %>
+
+<div class = "page-header">
+  <h1><%= @user.username.possessive %> boards</h1>
+</div>
+
+
+<div class="row grid" id = "boards" style = "margin-top: 30px">
+<% @user.boards.each do |board| %>
+  <div class = "col-md-3 grid-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= link_to board.name, board %>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <%= link_to board do %>
+          <% board.pins.take(1).each do |pin| %>
+            <%= image_tag pin.image.url(:medium), style: 'width: 100%' %>
+          <% end %>
+        <% end %>
+      </div>
+
+        <div class="panel-footer">
+          <%= board.description %>
+        </div>
+
+    </div>
+  </div>
+<% end %>
+</div>
